@@ -1,0 +1,4 @@
+## 2026-04-23 - [Critical] Hardcoded Supabase Secrets in Version Control
+**Vulnerability:** Found hardcoded `VITE_SUPABASE_ANON_KEY` and `VITE_SUPABASE_URL` in the `project/.env` file, which was tracked in the git repository.
+**Learning:** Developers sometimes commit `.env` files directly by mistake when initially setting up a project or integrating with cloud services, compromising environment secrets and providing an attack surface if the repo becomes public or is breached.
+**Prevention:** Always add `.env` and `.env.*` (excluding `.env.example`) to the `.gitignore` immediately upon project creation, and enforce pre-commit checks or git hooks (like `trufflehog` or `git-secrets`) to prevent committing secrets. Use `.env.example` as a template for developers without exposing real credentials.
