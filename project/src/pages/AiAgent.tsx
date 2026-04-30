@@ -159,6 +159,7 @@ function AiAgent() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about budgeting, investing, or any financial topic..."
+              maxLength={250}
               className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               disabled={isTyping}
             />
