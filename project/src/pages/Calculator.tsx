@@ -62,6 +62,9 @@ function Calculator() {
                 onChange={(e) => setLoanAmount(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="e.g., 10000"
+                min="0"
+                max="1000000000"
+                step="any"
                 required
               />
             </div>
@@ -76,6 +79,9 @@ function Calculator() {
                 onChange={(e) => setInterestRate(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="e.g., 5.5"
+                min="0"
+                max="100"
+                step="any"
                 required
               />
             </div>
@@ -90,6 +96,9 @@ function Calculator() {
                 onChange={(e) => setLoanTerm(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="e.g., 5"
+                min="0"
+                max="100"
+                step="1"
                 required
               />
             </div>
@@ -132,6 +141,9 @@ function Calculator() {
                 onChange={(e) => setSavingsGoal(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="e.g., 100000"
+                min="0"
+                max="1000000000"
+                step="any"
                 required
               />
             </div>
@@ -146,6 +158,9 @@ function Calculator() {
                 onChange={(e) => setMonthlyContribution(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="e.g., 500"
+                min="0"
+                max="10000000"
+                step="any"
                 required
               />
             </div>
@@ -160,6 +175,9 @@ function Calculator() {
                 onChange={(e) => setAnnualReturn(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="e.g., 7"
+                min="0"
+                max="100"
+                step="any"
                 required
               />
             </div>
