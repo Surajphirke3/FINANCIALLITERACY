@@ -11,29 +11,6 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Basic Input Validation
-    if (!formData.name.trim() || formData.name.length > 100) {
-      alert('Please provide a valid name (max 100 characters).');
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email) || formData.email.length > 254) {
-      alert('Please provide a valid email address.');
-      return;
-    }
-
-    if (!formData.subject.trim() || formData.subject.length > 200) {
-      alert('Please provide a valid subject (max 200 characters).');
-      return;
-    }
-
-    if (!formData.message.trim() || formData.message.length > 2000) {
-      alert('Please provide a valid message (max 2000 characters).');
-      return;
-    }
-
     // In a real application, this would send the form data to a server
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
@@ -104,7 +81,6 @@ function Contact() {
                   onChange={handleChange}
                   className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
-                  maxLength={100}
                 />
               </div>
 
@@ -119,7 +95,6 @@ function Contact() {
                   onChange={handleChange}
                   className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
-                  maxLength={254}
                 />
               </div>
 
@@ -134,7 +109,6 @@ function Contact() {
                   onChange={handleChange}
                   className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
-                  maxLength={200}
                 />
               </div>
 
@@ -149,7 +123,6 @@ function Contact() {
                   rows={6}
                   className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
-                  maxLength={2000}
                 ></textarea>
               </div>
 
