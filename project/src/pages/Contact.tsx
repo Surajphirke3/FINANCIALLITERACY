@@ -35,7 +35,6 @@ function Contact() {
     }
 
     // In a real application, this would send the form data to a server
-    console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
