@@ -42,6 +42,12 @@ function AiAgent() {
     e.preventDefault();
     if (!input.trim()) return;
 
+    // Security Enhancement: Prevent excessively large inputs
+    if (input.length > 500) {
+      alert("Please limit your message to 500 characters.");
+      return;
+    }
+
     // Add user message
     setMessages(prev => [...prev, { type: 'user', content: input }]);
     setInput('');
@@ -161,6 +167,7 @@ function AiAgent() {
               placeholder="Ask about budgeting, investing, or any financial topic..."
               className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               disabled={isTyping}
+              maxLength={500}
             />
             <button
               type="submit"
