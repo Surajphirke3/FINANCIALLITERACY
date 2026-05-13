@@ -35,7 +35,8 @@ function Contact() {
     }
 
     // In a real application, this would send the form data to a server
-    console.log('Form submitted:', formData);
+    // SECURITY CONCERN: Do not log sensitive user data (PII) to the console
+    console.log('Form submitted successfully');
     alert('Thank you for your message! We will get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
